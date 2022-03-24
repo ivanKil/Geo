@@ -3,11 +3,26 @@ package com.kusch.geo.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.kusch.geo.model.dao.MarkerDao
+import com.kusch.geo.model.data.MarkerEntity
+import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel(private val markerDao: MarkerDao) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val ldMarkers: MutableLiveData<List<MarkerEntity>> = MutableLiveData()
+    val ldAddMarker: MutableLiveData<MarkerEntity> = MutableLiveData()
+
+    fun requestMarkers() {
+        viewModelScope.launch {
+            ldMarkers.value = markerDao.findAll()
+        }
     }
-    val text: LiveData<String> = _text
+
+    fun addMarker(markerEntity: MarkerEntity) {
+        viewModelScope.launch {
+            markerDao.add(markerEntity)
+            ldAddMarker.value = markerEntity
+        }
+    }
 }

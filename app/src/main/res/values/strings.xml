@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Geo</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Карта</string>
+    <string name="title_markers">Маркеры</string>
     <string name="title_notifications">Notifications</string>
+    <string name="default_info_title">default_info_title</string>
+    <string name="default_info_snippet">default_info_snippet</string>
+    <string name="name">Название</string>
+    <string name="annotation">Аннотация</string>
+    <string name="marker_info">Информация о маркере</string>
+    <string name="ok">Сохранить</string>
+    <string name="cancel">Отмена</string>
 </resources>

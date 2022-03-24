@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/error_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/marker_item_name"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_height="wrap_content"
+            tools:text="Header" />
+
+        <TextView
+            android:id="@+id/marker_item_annotation"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_height="wrap_content"
+            tools:text="annotation" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

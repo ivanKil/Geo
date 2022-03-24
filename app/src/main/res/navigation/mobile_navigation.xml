@@ -13,13 +13,8 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.kusch.geo.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:name="com.kusch.geo.ui.dashboard.MarkersFragment"
+        android:label="@string/title_markers"
         tools:layout="@layout/fragment_dashboard" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.kusch.geo.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
 </navigation>
